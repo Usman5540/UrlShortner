@@ -7,6 +7,8 @@ const path = require('path');//
 const {DbConnection}=require('./connection');
 const UrlRouter=require('./routes/user');
 const ejsRouter=require('./routes/staticroutes')
+
+app.use(express.static('public'));
 // Access environment variables
 const mongoURI = process.env.MONGODB_URI;
 const port = process.env.PORT || 3000; // default to 3000 if PORT is not set

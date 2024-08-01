@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/style.css" />
     <title>Shortify</title>
-    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Url Shortener</h1>
       <% if (locals.shrid) { %>
-      <p>Generated Url: https://shortify--url.vercel.app//url/<%= shrid %></p>
+      <p>Generated Url: s--u.vercel.app/url/<%= shrid %></p>
+      <p>Past The Link In New Tab</p>
       <% } %>
       <form action="/url" method="POST">
         <label for="name">
