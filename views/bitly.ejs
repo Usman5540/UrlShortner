@@ -4,16 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shortify</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Url Shortener</h1>
       <% if (locals.shrid) { %>
-      <p>
-        Generated Url: https://url-shortner-gules-seven.vercel.app/url/<%= shrid
-        %>
-      </p>
+      <p>Generated Url: https://shortify--url.vercel.app//url/<%= shrid %></p>
       <% } %>
       <form action="/url" method="POST">
         <label for="name">
