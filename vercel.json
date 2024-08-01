@@ -9,11 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.js"
+      "dest": "/"
     }
-  ],
-  "env": {
-    "MONGODB_URI": "mongodb+srv://urlboy:urlboy@urlshortner.ldrgj3q.mongodb.net/?retryWrites=true&w=majority&appName=UrlShortner",
-    "PORT": "3000"
-  }
+  ]
 }
