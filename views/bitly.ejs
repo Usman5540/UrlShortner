@@ -4,26 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shortify</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <h1>Url Shortner</h1>
-    <!-- url:https://google.com  that is why we used action = "/url" -->
-    <% if (locals.shrid) { %>
-    <p>
-      Generated Url: https://url-shortner-gules-seven.vercel.app/url/<%=shrid %>
-    </p>
-    <% } %>
-    <form action="/url" method="POST">
-      <label for="name"> <h3>Enter Your Orignal Url</h3></label>
-      <input
-        type="text"
-        id="name"
-        name="url"
-        required
-        placeholder="example.com"
-      />
-
-      <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+      <h1>Url Shortener</h1>
+      <% if (locals.shrid) { %>
+      <p>
+        Generated Url: https://url-shortner-gules-seven.vercel.app/url/<%= shrid
+        %>
+      </p>
+      <% } %>
+      <form action="/url" method="POST">
+        <label for="name">
+          <h3>Enter Your Original Url</h3>
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="url"
+          required
+          placeholder="example.com"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
