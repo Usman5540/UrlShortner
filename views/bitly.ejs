@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>docs</title>
   </head>
-  <body>
+  <body style="display: flex ;align-items: center;justify-content: center;">
     <h1>Url Shortner</h1>
     <!-- url:https://google.com  that is why we used action = "/url" -->
     <% if (locals.shrid) { %>
     <p><h1>Generated Url:</h1> Shortify.Vercel/url/<%=shrid %></p>
     <% } %>
-    <form action="/url" method="POST">
+    <form action="/url" method="POST" >
       <label for="name"> <h1>Enter Your Orignal Url</h1></label>
       <input type="text" id="name" name="url" required  placeholder="example.com"/>
 
