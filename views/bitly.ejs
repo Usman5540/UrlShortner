@@ -9,7 +9,7 @@
     <h1>Url Shortner</h1>
     <!-- url:https://google.com  that is why we used action = "/url" -->
     <% if (locals.shrid) { %>
-    <p>Url Generated: http://localhost:3000/url/<%=shrid %></p>
+    <p><h1>Generated Url:</h1> Shortify.Vercel/url/<%=shrid %></p>
     <% } %>
     <form action="/url" method="POST">
       <label for="name"> Enter Orignal Url </label>
