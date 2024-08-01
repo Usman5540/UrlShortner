@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>docs</title>
+    <title>Shortify</title>
   </head>
   <body>
     <h1>Url Shortner</h1>
     <!-- url:https://google.com  that is why we used action = "/url" -->
     <% if (locals.shrid) { %>
-    <p><h3>Generated Url:</h3> <h4>Shortify.Vercel/url/<%=shrid %></h4></p>
+    <p><h3>Generated Url:</h3> Shortify.Vercel/url/<%=shrid %></p>
     <% } %>
     <form action="/url" method="POST" >
       <label for="name"> <h3>Enter Your Orignal Url</h3></label>
