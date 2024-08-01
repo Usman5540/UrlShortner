@@ -1,0 +1,19 @@
+"E11000 duplicate key error collection: UrlShortner.users index: Shortid_1 dup key: { Shortid: null }"
+// asn 
+using wrong spelling like shortid insdead of with capital S like Shortid
+2:error
+not found because using wrong syntax like {Shortid} instead Shortid without curly braces
+3: error
+"Parameter \"filter\" to findOneAndUpdate() must be an object, got \"9qF5LRc2N\" (type string)""Parameter \"filter\" to findOneAndUpdate() must be an object, got \"9qF5LRc2N\" (type string)"
+ans 
+wrong syntax for findOneAndUpdate() instead findOneAndUpdate({})
+
+4: what the fuckkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+i did not put https:// before name like google.com
+
+5app.set('views', path.resolve(__dirname, 'views')); // giving path whare my ejs file exists
+                 ^
+
+ReferenceError: path is not defined    at Object
+ANS
+if we want to use path.resolve we must need to import path module 

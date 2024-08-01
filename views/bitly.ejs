@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>docs</title>
+  </head>
+  <body>
+    <h1>Url Shortner</h1>
+    <!-- url:https://google.com  that is why we used action = "/url" -->
+    <% if (locals.shrid) { %>
+    <p>Url Generated: http://localhost:3000/url/<%=shrid %></p>
+    <% } %>
+    <form action="/url" method="POST">
+      <label for="name"> Enter Orignal Url </label>
+      <input type="text" id="name" name="url" required />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
