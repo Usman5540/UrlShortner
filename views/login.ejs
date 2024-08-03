@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form action="/login" class="form" method="post">
+      <h1 style="color: white;">Login</h1>
+      <input
+        type="text"
+        placeholder="username"
+        name="email"
+        value="<%= locals.email %>"
+      />
+      <div class="password-input">
+        <input
+          type="password"
+          placeholder="password"
+          name="password"
+          autocomplete="off"
+          id="password-input"
+        />
+        <!-- <button type="button" id="toggle-password">Show</button> -->
+      </div>
+      <p class="error"><%= locals.error %></p>
+      <button type="submit">Login</button>
+    </form>
+    <script src="password.js"></script>
+    <!-- Make sure the path to the JavaScript file is correct -->
+  </body>
+</html>
+  <!-- <script>
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const message = urlParams.get("message");
+      if (message) {
+        // Display as an alert
+        alert(message);
+      }
+    };
+  </script> -->
+</html>

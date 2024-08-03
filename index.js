@@ -6,7 +6,10 @@ const path = require('path');//
 // const port=3000;
 const {DbConnection}=require('./connection');
 const UrlRouter=require('./routes/user');
-const ejsRouter=require('./routes/staticroutes')
+const ejsRouter=require('./routes/staticroutes');
+const newUserRouter=require("./routes/NewUser");
+const cookieParser = require('cookie-parser');
+const authentication=require('./middleware/auth');
 
 app.use(express.static('public'));
 // Access environment variables
@@ -24,12 +27,15 @@ DbConnection(Url).then(()=>{
 app.set('view engine', 'ejs');// tells i am going to use ejs instead other like blaa for server side rendring 
 app.set('views', path.resolve(__dirname, 'views')); // giving path whare my ejs file exists 
 
+
 //middleware 
 app.use(express.json());// for getting data as json 
 app.use(express.urlencoded({extended:true})); // for getting data from form 
+app.use(cookieParser())
 
-app.use("/url",UrlRouter);
+app.use("/url",authentication,UrlRouter);
 app.use("/",ejsRouter);
+app.use("/",newUserRouter);
 
 
 
