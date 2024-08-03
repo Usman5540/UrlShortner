@@ -37,7 +37,7 @@ async function login(req,res){
         // If passwords do not match
         if (!isPasswordValid) {
             //  res.render("login", { email,error: "Incorrect password. Please try again." });
-            return res.render('login',{error:"invalid password"});
+            return res.render('login',{error:"wrong password Enter Valid password"});
         }
         const token= jwt.sign({_id:user._id},'ok');
         console.log(token);
