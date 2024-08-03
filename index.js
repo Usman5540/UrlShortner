@@ -11,7 +11,7 @@ const newUserRouter=require("./routes/NewUser");
 const cookieParser = require('cookie-parser');
 const authentication=require('./middleware/auth');
 
-app.use(express.static('public'));
+
 // Access environment variables
 const mongoURI = process.env.MONGODB_URI;
 const port = process.env.PORT || 3000; // default to 3000 if PORT is not set
@@ -26,6 +26,8 @@ DbConnection(Url).then(()=>{
 //setting up views for ejs 
 app.set('view engine', 'ejs');// tells i am going to use ejs instead other like blaa for server side rendring 
 app.set('views', path.resolve(__dirname, 'views')); // giving path whare my ejs file exists 
+// app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 //middleware 
