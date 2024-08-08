@@ -1,19 +1,19 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
 }
 
 .container2 {
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
-
+gap: 10px;
     display: flex;
 }
 
 .top-right-link {
     padding: 10px 20px;
     color: black;
-    gap: 10px;
+   
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -21,12 +21,42 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* .top-right-link:not(:last-child) {
-    margin-right: 20px;
-    /* Adds space between the buttons */
-} */
+
 
 .top-right-link:hover {
     background-color: #f0f0f0;
     color: #000;
-}
+} */
+ body {
+     font-family: Arial, sans-serif;
+ }
+
+ .container2 {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     display: flex;
+     gap: 10px;
+     /* Space between the buttons */
+ }
+
+ .button-wrapper {
+     display: flex;
+ }
+
+ /* Base styles for all buttons */
+ .top-right-link {
+     padding: 10px 20px;
+     color: black;
+     background-color: #fff;
+     border-radius: 15px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     text-decoration: none;
+     transition: background-color 0.3s, color 0.3s;
+ }
+
+ /* Hover effects for all buttons */
+ .top-right-link:hover {
+     background-color: #f0f0f0;
+     color: #000;
+ }
