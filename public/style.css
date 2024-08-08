@@ -18,7 +18,7 @@ body {
     max-width: 600px;
     /* Maximum width for larger screens */
 }
-/* .container3{
+.container3 {
     text-align: center;
     background-color: #fff;
     padding: 10px;
@@ -27,7 +27,7 @@ body {
     width: 100%;
     max-width: 600px;
     /* Maximum width for larger screens */
-/* }  */
+}
 h1 {
     margin-bottom: 20px;
 }

@@ -1,51 +1,30 @@
-
-
-.top-right-link {
+body {
+   
+    font-family: Arial, sans-serif;
+ 
+}
+.container2 {
     position: absolute;
     top: 10px;
-    /* Aligns the link to the top */
     right: 10px;
-    /* Aligns the link to the right */
-    padding: 10px;
-    /* Optional padding for better spacing */
-    /* background-color: #f8f9fa; */
-    /* Background color for the link */
+    display: flex;
+    gap: 10px;
+}
+
+.top-right-link {
+    padding: 10px 20px;
     color: black;
-    /* Link color */
-        background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    /* Remove underline from the link */
-    /* border: 1px solid #007bff; */
-    /* Optional border */
+    background-color: #fff;
     border-radius: 15px;
-    /* Optional border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .top-right-link:hover {
-    background-color: darkgray;
-    /* opacity: 0.1; */
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #002D62;
+    background-color: #f0f0f0;
+    color: #000;
 }
 
 
-.container3 {
-    text-align: center;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    /* Maximum width for larger screens */
-}
+

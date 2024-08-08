@@ -29,7 +29,11 @@ router.get("/analytic",authentication,async (req,res)=>{
     }
 })
 
+router.get("/logout",async(req,res)=>{
 
+     res.clearCookie('token'); // Clear the authToken cookie
+  res.redirect('/'); // Redirect to the home page or login pag
+})
 
 router.get('/SignUp',(req,res)=>{
      res.render('SignUp');// it will took from Views folder
