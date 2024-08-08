@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const  {Url}=require('../models/user');
-const {authentication}=require("../middleware/auth")
+const {authentication,checkAuthorization}=require("../middleware/auth")
 router.get('/', async (req,res)=>{
       try {
 
@@ -13,7 +13,20 @@ router.get('/', async (req,res)=>{
     }
 
 })
+router.get("/admin/analytic",authentication,checkAuthorization(["ADMIN"]),async(req,res)=>{
+          if(!req.user) return res.redirect("/login");
+          if(req.user.roles!=="ADMIN") res.end("unAuthorized");
+          try {
+                const userUrls=await Url.find({});
+             res.render('Analytics', {userUrls });
+          } catch (error) {
+       
+        console.error('Error retrieving URLs:', error);
+        res.status(500).send('Internal Server Error');
+    }
+      
 
+})
 router.get("/analytic",authentication,async (req,res)=>{
      if(!req.user) res.redirect("/login");// just for the sake of conformation 
    try {   // Fetch URLs for all users

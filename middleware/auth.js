@@ -33,11 +33,23 @@ const authentication = async (req, res, next) => {
       return res.redirect('/login');
     } else {
       // Handle other errors
-      return res.status(500).json({ message: 'Internal server error' });
+      return res.status(500).json({ message: 'Internal server ' });
     }
   }
 };
+function checkAuthorization(roles=[])
+   
+{
+     console.log(roles);
+  return function(req,res,next){
+    if (!req.user) return res.redirect("/login");
+    else if(!roles.includes(req.user.roles)) return res.end("unAutorized")
+   next();
+  }
+
+
+}
 
 
 
-module.exports = {authentication};
+module.exports = {authentication,checkAuthorization};

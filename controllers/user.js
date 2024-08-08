@@ -25,6 +25,7 @@ const id = shortid.generate();
        objectId: req.user._id,// i will give this id which points to user who creates this url 
        // this what we sent from auth middleware  req.user._id stored objectId in uses collection 
        // using this same user id  i will query this id which stored in users collection at staticroutes.js
+      //  roles:req.user.role,that is default set with "NORMAL"
     })
       //  res.status(201).json(urlResult.Shortid);
       // console.log(urlResult);

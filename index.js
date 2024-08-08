@@ -9,7 +9,7 @@ const UrlRouter=require('./routes/user');
 const StaticRoutes=require('./routes/staticroutes');
 const newUserRouter=require("./routes/NewUser");
 const cookieParser = require('cookie-parser');
-const {authentication}=require('./middleware/auth');
+const {authentication,checkAuthorization}=require('./middleware/auth');
 
 
 // Access environment variables
@@ -29,11 +29,11 @@ app.set('views', path.resolve(__dirname, 'views')); // giving path whare my ejs 
 // app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 //middleware 
 app.use(express.json());// for getting data as json 
 app.use(express.urlencoded({extended:true})); // for getting data from form 
 app.use(cookieParser())
+// app.use();// this will authenticate any way 
 
 app.use("/url",authentication,UrlRouter);
 app.use("/", StaticRoutes);
