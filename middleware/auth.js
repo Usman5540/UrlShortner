@@ -4,7 +4,7 @@ const User = require('../models/signup'); // Adjust the path to your User model
 const authentication = async (req, res, next) => {
   try {
     const { token } = req.cookies;
-  console.log(token);
+  // console.log(token);
     if (!token) {
       return res.redirect('/login');
     }
@@ -38,4 +38,6 @@ const authentication = async (req, res, next) => {
   }
 };
 
-module.exports = authentication;
+
+
+module.exports = {authentication};

@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="button.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Shortify</title>
   </head>
   <body>
+    <div class="container2">
+      <a href="/analytic" class="top-right-link">Analytics</a>
+    </div>
     <div class="container">
       <h1>Shortify</h1>
       <% if (locals.shrid) { %>
       <p>Generated Url: s--u.vercel.app/url/<%= shrid %></p>
-
       <% } %>
       <form action="/url" method="POST">
         <label for="name">

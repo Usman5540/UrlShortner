@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="button.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table class="container3">
+      <thead>
+        <tr>
+          <th>Sr. NO</th>
+          <th>Shortid</th>
+          <th>Redirect Url</th>
+          <th>Clicks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (userUrls && userUrls.length > 0) { %> <% userUrls.forEach((urls,
+        index) => { %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= urls.Shortid %></td>
+          <td><%= urls.redirectUrl %></td>
+          <td><%= urls.visitHistory %></td>
+        </tr>
+        <% }) %> <% } else { %>
+        <tr>
+          <td colspan="4">No data available</td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>

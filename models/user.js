@@ -19,6 +19,11 @@ const urlSchema= new mongoose.Schema({
         {timestamp:{type:Number}} // this string will store history in number type object 
 
      ]
+     ,
+     objectId:{
+       type: mongoose.Schema.Types.ObjectId,// this is used to reference the object in collectin 
+       ref:"UserNew"// reference the model which created this url from sginup model 
+     }
 
 })
 const Url= new mongoose.model('User',urlSchema);

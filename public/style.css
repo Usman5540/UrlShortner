@@ -18,7 +18,16 @@ body {
     max-width: 600px;
     /* Maximum width for larger screens */
 }
-
+/* .container3{
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    /* Maximum width for larger screens */
+/* }  */
 h1 {
     margin-bottom: 20px;
 }
@@ -56,6 +65,7 @@ p {
     margin-top: 20px;
     color: #333;
 }
+
 
 /* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
